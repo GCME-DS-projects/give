@@ -2,6 +2,31 @@
   "name": "@give/web",
   "version": "0.0.1",
   "private": true,
+  "nx": {
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "options": {
+        "outputPath": "dist/apps/web"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "dev": true,
+        "port": 4200,
+        "buildTarget": "build"
+      },
+      "configurations": {
+        "development": {
+          "dev": true
+        }
+      },
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"]
+    }
+  }
+},
   "dependencies": {
     "next": "~15.2.4",
     "react": "19.0.0",

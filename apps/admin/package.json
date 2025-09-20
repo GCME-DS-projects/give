@@ -2,6 +2,31 @@
   "name": "@give/admin",
   "version": "0.0.1",
   "private": true,
+  "nx": {
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "options": {
+        "outputPath": "dist/apps/admin"
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "dev": true,
+        "port": 4201,
+        "buildTarget": "build"
+      },
+      "configurations": {
+        "development": {
+          "dev": true
+        }
+      },
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"]
+    }
+  }
+},
   "dependencies": {
     "next": "~15.2.4",
     "react": "19.0.0",
