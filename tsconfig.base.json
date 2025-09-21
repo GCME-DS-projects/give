@@ -17,13 +17,12 @@
     "strict": true,
     "target": "es2022",
     "customConditions": ["@give/source"],
-    "baseUrl": ".",                         // <-- add this
+    "baseUrl": ".",                         
     "paths": {
-      "@shared/src/*": ["./shared/src/*"],
-      "@give/shared/ui": ["./shared/src/index.ts"],
       "@give/shared/*": ["./shared/src/*"],
-      "@give/shared/lib/*": ["./shared/src/lib/*"],
-      "src/*": ["./shared/src/*"]
+      "@give/shared/lib": ["./shared/src/lib/index.ts"], 
+      "@give/shared/lib/*": ["./shared/src/lib/*"],      
+      "@give/shared/ui": ["./shared/src/index.ts"]
     }
   }
 }
