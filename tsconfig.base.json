@@ -20,7 +20,7 @@
     "baseUrl": ".",                         
     "paths": {
       "@give/shared/*": ["./shared/src/*"],
-      "@give/shared/lib": ["./shared/src/lib/index.ts"], 
+      "@give/shared/lib/utils": ["./shared/src/lib/utils.ts"],
       "@give/shared/lib/*": ["./shared/src/lib/*"],      
       "@give/shared/ui": ["./shared/src/index.ts"]
     }

@@ -8,7 +8,11 @@
     "emitDeclarationOnly": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["node"],
-    "jsx": "react-jsx" 
+    "jsx": "react-jsx",
+    "paths": {
+      "@give/shared/lib/utils": ["./src/lib/utils.ts"],
+      "@give/shared/lib/*": ["./src/lib/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "references": [],
