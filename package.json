@@ -5,7 +5,7 @@
   "scripts": {
     "dev:web": "nx serve web",
     "dev:admin": "nx serve admin",
-    "dev:api": "nx serve api",
+    "dev:api": "nx serve api --watch",
     "dev": "concurrently \"nx serve web\" \"nx serve admin\" \"nx serve api\"",
     "db:generate": "nx run api:prisma-generate",
     "generate-auth-schema": "better-auth-cli generate --config ./src/modules/auth/auth.ts"
@@ -56,6 +56,7 @@
     "jest-environment-jsdom": "^30.0.2",
     "jest-environment-node": "^30.0.2",
     "jest-util": "^30.0.2",
+    "jsonc-eslint-parser": "^2.1.0",
     "nx": "21.5.2",
     "postcss": "8.4.38",
     "prettier": "^2.6.2",
@@ -70,18 +71,23 @@
   },
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "shared"
   ],
   "dependencies": {
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
-    "@prisma/client": "^5.19.0",
     "axios": "^1.6.0",
+    "card": "^2.5.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "next": "~15.2.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.0"
+    "rxjs": "^7.8.0",
+    "shadcn": "^3.3.1",
+    "tailwind-merge": "^3.3.1"
   }
 }

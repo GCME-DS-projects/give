@@ -1,0 +1,27 @@
+{
+  "name": "ui",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "shared/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist",
+        "main": "src/index.ts",
+        "tsConfig": "tsconfig.lib.json",
+        "skipTypeCheck": true,
+        "stripLeadingPaths": true,
+        "postcssConfig": "postcss.config.js"
+      }
+    }
+  },
+  "tags": [],
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3"
+  }
+}

@@ -23,9 +23,9 @@
       }
     ],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"],                         
+      "@give/shared/*": ["../../shared/src/*"],   
+      "@give/shared/ui": ["../../shared/src/index.ts"]
     },
     "types": [
       "jest",
@@ -35,6 +35,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "../../shared/src/**/*.ts",
     "../../dist/apps/admin/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"

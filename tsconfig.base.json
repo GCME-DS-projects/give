@@ -16,6 +16,13 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "customConditions": ["@give/source"]
+    "customConditions": ["@give/source"],
+    "baseUrl": ".",                         // <-- add this
+    "paths": {
+      "@shared/src/*": ["./shared/src/*"],
+      "@give/shared/ui": ["./shared/src/index.ts"],
+      "@give/shared/*": ["shared/src/*"],
+      "src/*": ["./shared/src/*"]
+    }
   }
 }
