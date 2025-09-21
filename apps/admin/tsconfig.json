@@ -25,6 +25,7 @@
     "paths": {
       "@/*": ["./src/*"],                         
       "@give/shared/*": ["../../shared/src/*"],   
+      "@give/shared/lib/utils": ["../../shared/src/lib/utils.ts"],
       "@give/shared/ui": ["../../shared/src/index.ts"]
     },
     "types": [
