@@ -6,7 +6,7 @@
     "dev:web": "nx serve web",
     "dev:admin": "nx serve admin",
     "dev:api": "nx serve api --watch",
-    "dev": "concurrently \"nx serve web\" \"nx serve admin\" \"nx serve api\"",
+    "dev": "concurrently \"nx serve admin\" \"nx serve api\"",
     "db:generate": "nx run api:prisma-generate",
     "generate-auth-schema": "better-auth-cli generate --config ./src/modules/auth/auth.ts"
   },
