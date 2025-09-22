@@ -178,7 +178,8 @@ model Contribution {
   project       Projects?     @relation(fields: [projectId], references: [id])
   missionary    Missionary?   @relation(fields: [missionaryId], references: [id])
   strategy      Strategy?     @relation(fields: [strategyId], references: [id])
-  transaction   Transaction?  @relation(fields: [transactionId], references: [id])
+  transaction   Transaction?  @relation("ContributionToTransaction")
+
   contributor   Contributor   @relation(fields: [contributorId], references: [id])
 
   createdAt     DateTime      @default(now())
@@ -206,7 +207,7 @@ enum PAYMENT_METHOD {
 model Transaction {
   id             String             @id @default(uuid())
   contributionId String             @unique
-  contribution   Contribution       @relation(fields: [contributionId], references: [id])
+  contribution   Contribution       @relation("ContributionToTransaction", fields: [contributionId], references: [id])
   status         TRANSACTION_STATUS
   paymentMethod  PAYMENT_METHOD
   createdAt      DateTime           @default(now())
